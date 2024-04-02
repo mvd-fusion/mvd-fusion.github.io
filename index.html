@@ -16,17 +16,60 @@
 
     <!-- Custom styles for this template -->
     <link href="offcanvas.css" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <link href="assets/fontawesome-pro-6.3.0-web/css/all.min.css" rel="stylesheet">
+
 </head>
 
 <body>
 <div class="jumbotron jumbotron-fluid">
-    <div class="container"></div>
-    <h2>MVD-Fusion: Single-view 3D via Depth-consistent Multi-view Generation</h2>
-    <h3></h3>
-    <hr>
-    <p class="authors">
-       In Submission
-    </p>
+
+    <div style="background-color: #DDCECD;">
+    <div class="container">
+    <div class="row">
+
+        <div class="col-sm-6" style="text-align: left;">
+            <h2>MVD-Fusion: Single-view 3D via Depth-consistent Multi-view Generation</h2>
+            <h3></h3>
+            <p class="authors"> 
+                <a href="https://hzhupku.github.io/" target="_blank">Hanzhe Hu</a>*<sup>1</sup>, 
+                <a href="https://www.zhiz.dev/" target="_blank">Zhizhuo Zhou</a>*<sup>2</sup>, 
+                <a href="https://varunjampani.github.io/" target="_blank">Varun Jampani</a><sup>3</sup>, 
+                <a href="https://shubhtuls.github.io/" target="_blank">Shubham Tulsiani</a><sup>1</sup>
+            </p>
+            <p class="authors">* Equal contribution</p>
+            <p class="authors"><sup>1</sup>Carnegie Mellon University, <sup>2</sup>Stanford University, <br> <sup>3</sup>Stability AI</p>
+
+            <p class="small">
+                We introduce MVD-Fusion, a method for single-view 3D inference via generative modeling of multi-view RGB-D Images. 
+                While recent methods for 3D generation uses novel-view generative models, they often require a lengthy distillation process to generate 
+                a 3D output. Instead, we cast 3D inference as directly generating multiple consistent RGB-D views and build upon the insight that inferring depth
+                in addition to RGB can provide a mechanism for enforcing 3D consistency. Our method is able to train on both synthetic data, Objaverse, and real-world 
+                data, CO3D. We demonstrate the generalization of our model on both real and generated in-the-wild images. 
+            </p>
+
+            <a href="" class="button icon" style="background-color: rgba(255, 255, 255, 0.2)"> Paper &nbsp<i class="far fa-book-open"></i></a> &nbsp;&nbsp;
+            <a href="https://github.com/zhizdev/mvdfusion" class="button icon" style="background-color: rgba(255, 255, 255, 0.2)">Code &nbsp<i class="far fa-code"></i></a>  &nbsp;&nbsp;
+        
+            <p class="bold"><br>CVPR 2024</b>
+        </div>
+        <div class="col-sm-1">
+
+        </div>
+        <div class="col-sm-5">
+            <div class="blog-cover">
+                <img class="foreground img-fluid" src="img/background.png" alt="MVDFusion">
+                <img class="background img-fluid" src="img/background.png" alt="MVDFusion">
+            </div>
+        </div>
+        
+    </div>
+    </div>
+    </div>
 </div>
 
 
@@ -39,19 +82,22 @@
                 </video>
             </div> 
         </div>
-        <p>
-            We present MVD-Fusion: a method for single-view 3D inference via generative modeling of multi-view-consistent RGB-D images. While recent methods pursuing 3D inference advocate learning novel-view generative models, these generations are not 3D-consistent and require a distillation process to generate a 3D output. We instead cast the task of 3D inference as that of directly generating mutually-consistent multiple views, and we build on the insight that additionally inferring depth can provide a mechanism for enforcing this consistency.  Specifically, we train a denoising diffusion model to generate multi-view RGB-D images given a single RGB input image and leverage the (intermediate noisy) depth estimates to obtain reprojection-based conditioning for enabling multi-view consistency. We train our system using a large-scale synthetic dataset, and evaluate our approach on both, synthetic and real-world data. We demonstrate that our approach can yield more accurate synthesis compared to recent state-of-the-art, including distillation-based 3D inference and prior multi-view generation methods. We also evaluate the geometry induced by our multi-view depth prediction and find that it yields a more accurate representation than other direct 3D inference approaches. 
-        </p>
+        <div class="container-fluid w-85">
+            <p>
+                <span class="bold">MVD-Fusion</span> predits multi-view RGB-D images from a single input image, allowing for output to multiple 3D representations
+                such as point clouds, textured meshes, and Gaussian splats. 
+            </p>
+        </div>
     </div>
 
 
     <div class="section">
-        <h2>Results on the Objaverse Dataset</h2>
-        <hr>
-        <p>
-            We compare our method with Zero-1-to-3 and SyncDreamer, and visualize the input image, and multi-view images generated by each
-method as well as the ground-truth.
-        </p>
+        <div class="container-fluid w-85">
+            <h2>Results on the Objaverse</h2>
+            <p>
+            We compare our method against Zero-1-to-3 and SyncDreamer on the Objaverse test set. Our results are more consistent than Zero-1-to-3 and more realistic than SyncDreamer. 
+            </p>
+        </div>
         <div class="row align-items-center">
             <div class="col justify-content-center text-center">
                 <video width="70%" playsinline="" autoplay="" loop="" preload="" muted="">
@@ -62,12 +108,13 @@ method as well as the ground-truth.
     </div>
 
     <div class="section">
-        <h2>Results on the Google Scanned Object (GSO) Dataset</h2>
-        <hr>
-        <p>
-            We compare our method with Zero-1-to-3 and SyncDreamer, and visualize the input image, and multi-view images generated by each
-method as well as the ground-truth.
-        </p>
+        <div class="container-fluid w-85">
+            <h2>Results on the Google Scanned Object (GSO)</h2>
+            <p>
+                We compare our method with Zero-1-to-3 and SyncDreamer, and visualize the input image, and multi-view images generated by each
+    method as well as the ground-truth.
+            </p>
+        </div>
         <div class="row align-items-center">
             <div class="col justify-content-center text-center">
                 <video width="70%" playsinline="" autoplay="" loop="" preload="" muted="">
@@ -78,11 +125,13 @@ method as well as the ground-truth.
     </div>
 
     <div class="section">
+        <div class="container-fluid w-85">
         <h2>Results of RGB-D Diffusion</h2>
-        <hr>
         <p>
             We show some results of RGB-D diffusion on the Objaverse test set.
         </p>
+        </div>
+
         <div class="row align-items-center">
             <div class="col justify-content-center text-center">
                 <video width="100%" playsinline="" autoplay="" loop="" preload="" muted="">
@@ -93,11 +142,10 @@ method as well as the ground-truth.
     </div>
 
     <div class="section">
+        <div class="container-fluid w-85">
         <h2>More Results</h2>
-        <hr>
-        <p>
+        </div>
         
-        </p>
         <div class="row align-items-center">
             <div class="col justify-content-center text-center">
                 <video width="100%" playsinline="" autoplay="" loop="" preload="" muted="">
@@ -108,7 +156,21 @@ method as well as the ground-truth.
     </div>
 
 
-    <hr>
+    <div class="section" style="margin-bottom: 4rem;">
+        <div class="container-fluid w-85">
+        <h2>Citation</h2>
+        <p>If you found this work is useful in your own research, please considering citing the following.</p>
+        <pre class="rounded">
+        <code>
+        @inproceedings{hu2024mvdfusion,
+            title={MVD-Fusion: Single-view 3D via Depth-consistent Multi-view Generation}, 
+            author={Hanzhe Hu and Zhizhuo Zhou and Varun Jampani and Shubham Tulsiani},
+            booktitle={CVPR},
+            year={2024}
+        }</code>
+        </pre>
+        </div>
+    </div> 
 
 </div>
 
@@ -124,4 +186,10 @@ method as well as the ground-truth.
         crossorigin="anonymous"></script>
 
 </body>
+<footer>
+    <div class="container">
+        <p class="tiny"> Webpage template inspired by Shikun Liu.</p>
+    </div>
+</footer>
+
 </html>

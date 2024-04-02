@@ -2,52 +2,190 @@
  * Style tweaks
  * --------------------------------------------------
  */
+@font-face {
+font-family: 'Athletics';
+src: url('assets/fonts/Athletics/Athletics-Regular.woff2') format('woff2'),
+}
+
+@font-face {
+  font-family: 'AthleticsBold';
+  src: url('assets/fonts/Athletics/Athletics-Bold.woff2') format('woff2'),
+}
+
+@font-face {
+  font-family: 'Tiempos';
+  src: url('assets/fonts/Tiempos/TiemposText-Regular.woff') format('woff2'),
+}
+
+@font-face {
+  font-family: 'Soehne';
+  src: url('assets/fonts/Soehne/soehne-buch.woff2') format('woff2'),
+}
+  
+
+
 html,
 body {
   overflow-x: hidden;  /*Prevent scroll on narrow devices */
-  padding-top: 30px;
-    text-align: justify;
+  text-align: left;
+  font-family: 'Athletics', 'Arial', sans-serif;
+  /* font-family: 'Athletics', 'Asap', 'Arial', sans-serif; */
 }
+
 footer {
-  padding: 10px 0;
+  background-color: #f6f6f6;
+  padding: 6rem 0rem 0.5rem 0rem;
 }
+
 .authors {
-  font-size: 20px;
+  font-size: 19px;
+  text-align: left;
+  font-family: 'Athletics', 'Arial', sans-serif;
 }
-/*.container {
+
+.container-text {
+  width: 70% !important;
   max-width: 768px;
-}*/
-.container {
-  max-width: 1000px;
 }
+
+.w-85 {
+  width: 85% !important;
+}
+
+pre {
+  background-color: #e8e8e8;
+  font-size: 15px !important;
+}
+
+.rounded{
+  border-radius: 1rem !important; 
+}
+
+/* .container {
+  max-width: 1150px;
+} */
+
 p {
-  font-size: 16px;
+  font-size: 20px;
+  font-family: 'Athletics', 'Arial', sans-serif;
+  text-align: left;
   /*padding-bottom: 20px;*/
 }
+
+.bold {
+  font-family: 'AthleticsBold', 'Arial', sans-serif !important;
+}
+
+.small {
+  font-size: 17px;
+}
+
+.tiny {
+  font-size: 15px;
+}
+
 
 li {
   font-size: 16px;
 }
 
 h2 {
-    text-align: center;
-    align: center;
-}
-
-.jumbotron{
-    text-align: center;
+    text-align: left;
 }
 
 .btn {
     font-size: 18px;
 }
 
+a:link { 
+  color: #00B8D4;
+  text-decoration: none; 
+} 
+a:visited {
+  color: #00B8D4;
+  text-decoration: none; 
+} 
+a:hover {
+  color: #353535;
+  text-decoration: none; 
+} 
+a:active { 
+  color: #00B8D4;
+  text-decoration: none; 
+}
+
+input[type=submit], input[type=reset], input[type=button], button, .button {
+  background-color: #ececec;
+  border-radius: 10px;
+  padding: 0.75em 1em;
+  color: #353535;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8em;
+  font-weight: 700;
+  font-family: "AthleticsMedium", sans-serif;
+  letter-spacing: 0.075em;
+  text-decoration: none;
+  text-transform: uppercase;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  &:hover {
+      background-color: #c2c2c2;
+      opacity: 0.8;
+      color: black;
+  }
+
+  &:active {
+      opacity: 0.5;
+      background-color: #c2c2c2;
+      color: black;
+  } 
+
+  &.icon {
+      i {
+          font-size: 1.2em;
+          padding-left: 0.5em;
+          padding-bottom: 1px;
+      }
+  }
+
+  &.project {
+      text-transform: none;
+      letter-spacing: 0;
+      font-weight: 600;
+      height: 0.75em;
+      padding: 0.6em;
+      font-size: 1em;
+      color: black;
+
+      &.white {
+          color: white;
+      }
+  }
+}
+
 .btn-disabled {
-    /*background-color: #f4f4f4;*/
+    background-color: #f4f4f4;
+}
+
+.jumbotron{
+  text-align: center;
+  background-color: #DDCECD;
+  color:#353535;
+  padding: 10rem 2rem 8rem 2rem;
 }
 
 .jumbotron h2 {
+  text-align: left;
   font-size: 36px;
+}
+
+.jumbotron p {
+  text-align: left;
+  font-family: 'Athletics', 'Arial', sans-serif;
 }
 
 .section {
@@ -108,3 +246,21 @@ h2 {
     margin-top: 30px;
 }
 
+.blog-cover {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 3vh 0;
+
+  img.foreground {
+      position: relative;
+      z-index: 2;
+  }
+
+  img.background {
+      position: absolute;
+      z-index: 1;
+      filter: blur(24px);
+  }
+}
