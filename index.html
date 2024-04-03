@@ -28,13 +28,13 @@
 <body>
 <div class="jumbotron jumbotron-fluid">
 
-    <div style="background-color: #DDCECD;">
+    <div>
     <div class="container">
     <div class="row">
 
-        <div class="col-sm-6" style="text-align: left;">
+    
+        <div class="col-sm-12" style="text-align: left;">
             <h2>MVD-Fusion: Single-view 3D via Depth-consistent Multi-view Generation</h2>
-            <h3></h3>
             <p class="authors"> 
                 <a href="https://hzhupku.github.io/" target="_blank">Hanzhe Hu</a>*<sup>1</sup>, 
                 <a href="https://www.zhiz.dev/" target="_blank">Zhizhuo Zhou</a>*<sup>2</sup>, 
@@ -42,29 +42,14 @@
                 <a href="https://shubhtuls.github.io/" target="_blank">Shubham Tulsiani</a><sup>1</sup>
             </p>
             <p class="authors">* Equal contribution</p>
-            <p class="authors"><sup>1</sup>Carnegie Mellon University, <sup>2</sup>Stanford University, <br> <sup>3</sup>Stability AI</p>
+            <p class="authors"><sup>1</sup>Carnegie Mellon University, <sup>2</sup>Stanford University, <sup>3</sup>Stability AI</p>
 
-            <p class="small">
-                We introduce MVD-Fusion, a method for single-view 3D inference via generative modeling of multi-view RGB-D Images. 
-                While recent methods for 3D generation uses novel-view generative models, they often require a lengthy distillation process to generate 
-                a 3D output. Instead, we cast 3D inference as directly generating multiple consistent RGB-D views and build upon the insight that inferring depth
-                in addition to RGB can provide a mechanism for enforcing 3D consistency. Our method is able to train on both synthetic data, Objaverse, and real-world 
-                data, CO3D. We demonstrate the generalization of our model on both real and generated in-the-wild images. 
-            </p>
+            <p class="bold">CVPR 2024</b>
 
-            <a href="" class="button icon" style="background-color: rgba(255, 255, 255, 0.2)"> Paper &nbsp<i class="far fa-book-open"></i></a> &nbsp;&nbsp;
-            <a href="https://github.com/zhizdev/mvdfusion" class="button icon" style="background-color: rgba(255, 255, 255, 0.2)">Code &nbsp<i class="far fa-code"></i></a>  &nbsp;&nbsp;
-        
-            <p class="bold"><br>CVPR 2024</b>
-        </div>
-        <div class="col-sm-1">
-
-        </div>
-        <div class="col-sm-5">
-            <div class="blog-cover">
-                <img class="foreground img-fluid" src="img/background.jpg" alt="MVDFusion">
-                <img class="background img-fluid" src="img/background.jpg" alt="MVDFusion">
-            </div>
+            <center>
+            <a href="" class="button icon"> Paper &nbsp<i class="far fa-book-open"></i></a> &nbsp;&nbsp;
+            <a href="https://github.com/zhizdev/mvdfusion" class="button icon">Code &nbsp<i class="far fa-code"></i></a>  &nbsp;&nbsp;
+            </center>
         </div>
         
     </div>
@@ -75,6 +60,7 @@
 
 <div class="container">
     <div class="section">
+        <div class="container-fluid w-85">
         <div class="row align-items-center">
             <div class="col justify-content-center text-center">
                 <video width="100%" playsinline="" autoplay="" loop="" preload="" muted="">
@@ -82,7 +68,8 @@
                 </video>
             </div> 
         </div>
-        <div class="container-fluid w-85">
+        </div>
+        <div class="container-fluid w-75">
             <p>
                 <span class="bold">MVD-Fusion</span> predits multi-view RGB-D images from a single input image, allowing for output to multiple 3D representations
                 such as point clouds, textured meshes, and Gaussian splats. 
@@ -90,14 +77,31 @@
         </div>
     </div>
 
+    <div class="section">
+        <div class="container-fluid w-75 rounded" style="background-color: #DDCECD;">
+            <br>
+            <h3>Abstract</h3>
+            <p class="small">
+                We introduce MVD-Fusion, a method for single-view 3D inference via generative modeling of multi-view RGB-D Images. 
+                While recent methods for 3D generation uses novel-view generative models, they often require a lengthy distillation 
+                process to generate a 3D output. Instead, we cast 3D inference as directly generating multiple consistent RGB-D views 
+                and build upon the insight that inferring depth in addition to RGB can provide a mechanism for enforcing 3D consistency. 
+                Our method is able to train on both synthetic data, Objaverse, and real-world data, CO3D. We demonstrate the generalization 
+                of our model on both real and generated in-the-wild images.
+            </p>
+            <br>
+        </div>
+    </div>
+
 
     <div class="section">
-        <div class="container-fluid w-85">
-            <h2>Results on the Objaverse</h2>
+        <div class="container-fluid w-75">
+            <h3>Results on the Objaverse</h3>
             <p>
             We compare our method against Zero-1-to-3 and SyncDreamer on the Objaverse test set. Our results are more consistent than Zero-1-to-3 and more realistic than SyncDreamer. 
             </p>
         </div>
+        <div class="container-fluid w-75">
         <div class="row align-items-center">
             <div class="col justify-content-center text-center">
                 <video width="70%" playsinline="" autoplay="" loop="" preload="" muted="">
@@ -105,16 +109,18 @@
                 </video>
             </div> 
         </div>
+        </div>
     </div>
 
     <div class="section">
-        <div class="container-fluid w-85">
-            <h2>Results on the Google Scanned Object (GSO)</h2>
+        <div class="container-fluid w-75">
+            <h3>Results on the Google Scanned Object (GSO)</h3>
             <p>
                 We compare our method with Zero-1-to-3 and SyncDreamer, and visualize the input image, and multi-view images generated by each
     method as well as the ground-truth.
             </p>
         </div>
+        <div class="container-fluid w-75">
         <div class="row align-items-center">
             <div class="col justify-content-center text-center">
                 <video width="70%" playsinline="" autoplay="" loop="" preload="" muted="">
@@ -122,16 +128,18 @@
                 </video>
             </div> 
         </div>
+        </div>
     </div>
 
     <div class="section">
-        <div class="container-fluid w-85">
-        <h2>Results of RGB-D Diffusion</h2>
-        <p>
-            We show some results of RGB-D diffusion on the Objaverse test set.
-        </p>
+        <div class="container-fluid w-75">
+            <h3>Results of RGB-D Diffusion</h3>
+            <p>
+                We show some results of RGB-D diffusion on the Objaverse test set.
+            </p>
         </div>
 
+        <div class="container-fluid w-75">
         <div class="row align-items-center">
             <div class="col justify-content-center text-center">
                 <video width="100%" playsinline="" autoplay="" loop="" preload="" muted="">
@@ -139,13 +147,15 @@
                 </video>
             </div> 
         </div>
+        </div>
     </div>
 
     <div class="section">
-        <div class="container-fluid w-85">
-        <h2>More Results</h2>
+        <div class="container-fluid w-75">
+        <h3>More Results</h3>
         </div>
         
+        <div class="container-fluid w-75">
         <div class="row align-items-center">
             <div class="col justify-content-center text-center">
                 <video width="100%" playsinline="" autoplay="" loop="" preload="" muted="">
@@ -153,21 +163,22 @@
                 </video>
             </div> 
         </div>
+        </div>
     </div>
 
 
     <div class="section" style="margin-bottom: 4rem;">
-        <div class="container-fluid w-85">
-        <h2>Citation</h2>
+        <div class="container-fluid w-75">
+        <h3>Citation</h3>
         <p>If you found this work is useful in your own research, please considering citing the following.</p>
         <pre class="rounded">
         <code>
-        @inproceedings{hu2024mvdfusion,
-            title={MVD-Fusion: Single-view 3D via Depth-consistent Multi-view Generation}, 
-            author={Hanzhe Hu and Zhizhuo Zhou and Varun Jampani and Shubham Tulsiani},
-            booktitle={CVPR},
-            year={2024}
-        }</code>
+    @inproceedings{hu2024mvdfusion,
+        title={MVD-Fusion: Single-view 3D via Depth-consistent Multi-view Generation}, 
+        author={Hanzhe Hu and Zhizhuo Zhou and Varun Jampani and Shubham Tulsiani},
+        booktitle={CVPR},
+        year={2024}
+    }</code>
         </pre>
         </div>
     </div> 
